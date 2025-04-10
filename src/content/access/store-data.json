@@ -1,0 +1,202 @@
+{
+    "大阪府": [
+        {
+            "store_name": "ミライニ薬局大阪駅店",
+            "address": {
+                "street": "大阪府大阪市北区梅田３丁目１−１大阪駅ビル3F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局梅田店",
+            "address": {
+                "street": "大大阪府大阪市北区芝田１丁目１サンコービル2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局天満橋店",
+            "address": {
+                "street": "大阪府大阪市中央区大阪城１−１キャッスルビル2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-3.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局大阪城公園店",
+            "address": {
+                "street": "大阪府大阪市中央区天満橋京町１"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局天神橋筋六丁目店",
+            "address": {
+                "street": "大阪府大阪市北区７丁目２"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局鶴橋店",
+            "address": {
+                "street": "大阪府大阪市生野区鶴橋2丁目１−２０オーエスビル2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-3.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局北浜店",
+            "address": {
+                "street": "大阪府大阪市中央区北浜２−３−１２"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局千林店",
+            "address": {
+                "street": "大阪府大阪市旭区千林１丁目１１"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局高槻店",
+            "address": {
+                "street": "大阪府高槻市芥川町１丁目１−１高槻駅前ビル1F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-3.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局守口店",
+            "address": {
+                "street": "大阪府守口市京阪本通２丁目"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局寝屋川店",
+            "address": {
+                "street": "大阪府寝屋川市早子町16番11号サンコービル2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局くずは店",
+            "address": {
+                "street": "大阪府枚方市楠葉花園町１５−１"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-3.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局吹田店",
+            "address": {
+                "street": "大阪府吹田市朝日町１"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局豊中店",
+            "address": {
+                "street": "大阪府豊中市本町１丁目１オーエスビル2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        }
+    ],
+    "兵庫県": [
+        {
+            "store_name": "ミライニ薬局尼崎店",
+            "address": {
+                "street": "兵庫県尼崎市潮江１丁目１YKビル3F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局園田店",
+            "address": {
+                "street": "兵庫県尼崎市東園田町９丁目"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局武庫川店",
+            "address": {
+                "street": "兵庫県西宮市武庫川町２−９"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-3.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局深江店",
+            "address": {
+                "street": "兵庫県神戸市東灘区深江北町４丁目１ステーションビル3F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局伊丹店",
+            "address": {
+                "street": "大阪府大阪市北区７丁目２兵庫県伊丹市伊丹１丁目１５"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        }
+    ],
+    "京都府": [
+        {
+            "store_name": "ミライニ薬局八幡店",
+            "address": {
+                "street": "京都府八幡市八幡科手1−番地"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局祇園四条店",
+            "address": {
+                "street": "京都府京都市東山区川端町櫻井ビルディング2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局丹波口店",
+            "address": {
+                "street": "京都府京都市下京区中堂寺南町"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-3.jpg"
+        }
+    ],
+    "奈良県": [
+        {
+            "store_name": "ミライニ薬局奈良店",
+            "address": {
+                "street": "奈良県奈良市三条本町１大通りビル2F"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-1.jpg"
+        },
+        {
+            "store_name": "ミライニ薬局店大和郡山店",
+            "address": {
+                "street": "奈良県大和郡山市下三橋町７４１"
+            },
+            "phone_number": "06-1234-5678",
+            "image": "/assets/store-2.jpg"
+        }
+    ]
+} 

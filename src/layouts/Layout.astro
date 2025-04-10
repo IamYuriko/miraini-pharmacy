@@ -1,0 +1,38 @@
+---
+const { title = "ミライニ薬局" } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="title" content="ミライニ薬局" />
+    <meta
+      name="description"
+      content="地域に根づき、未来を育む。はじめまして、ミライニ薬局です。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="ミライニ薬局" />
+    <meta property="og:title" content="ミライニ薬局" />
+    <meta
+      property="og:description"
+      content="地域に根づき、未来を育む。はじめまして、ミライニ薬局です。"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="" href="" />
+    <title>{title}</title>
+    <link href="/src/styles/global.css" rel="stylesheet" />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+  <script>
+    import "../scripts/script.js";
+  </script>
+</html>

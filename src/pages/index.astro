@@ -1,0 +1,265 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Slider from "../components/Slider.astro";
+import BlogList from "../components/BlogList.astro";
+import NewsList from "../components/NewsList.astro";
+
+import { Image } from "astro:assets";
+import mv1 from "../assets/mv-1.jpg";
+import mv2 from "../assets/mv-2.jpg";
+import mv1sp from "../assets/mv-1-sp.jpg";
+import mv2sp from "../assets/mv-2-sp.jpg";
+import logoTree from "../assets/about-logo.png";
+import servicesPharmacy from "../assets/services-pharmacy.png";
+import servicesHomecare from "../assets/services-homecare.png";
+import recruit from "../assets/recruit.jpg";
+---
+
+<Layout>
+  <main>
+    <!-- hero -->
+    <section
+      class="mt-xl 2xl:mt-0 px-[clamp(1.563rem,1.012rem+2.35vw,3.125rem)]"
+    >
+      <div class="max-w-[1340px] mx-auto grid">
+        <section class="animate-easeInOut col-start-1 row-start-1">
+          <picture>
+            <source srcset={mv1.src} media="(min-width: 640px)" />
+            <img
+              src={mv1sp.src}
+              alt="地域に根ざし未来を育む"
+              class="rounded-20 md:rounded-50"
+            />
+          </picture>
+        </section>
+
+        <section
+          class="animate-easeInOut [animation-delay:4s] col-start-1 row-start-1"
+        >
+          <picture>
+            <source srcset={mv2.src} media="(min-width: 640px)" />
+            <img
+              src={mv2sp.src}
+              alt="はじめましてミライニ薬局です"
+              class="rounded-20 md:rounded-50"
+            />
+          </picture>
+        </section>
+      </div>
+    </section>
+
+    <!-- news -->
+    <section class="mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)] px-3xl">
+      <div class="max-w-[840px] mx-auto">
+        <h2
+          class="text-[clamp(1.5rem,0.972rem+2.25vw,3rem)] text-center after:content-['info'] after:block after:font-en after:text-[clamp(0.875rem,0.567rem+1.31vw,1.75rem)] after:text-tertiary after:center after:font-normal font-bold mb-[clamp(1.5rem,0.752rem+3.19vw,3.625rem)]"
+        >
+          お知らせ
+        </h2>
+        <NewsList />
+        <div
+          class="mt-[clamp(1.5rem,0.62rem+3.76vw,4rem)] text-center lg:text-right"
+        >
+          <a
+            href="/"
+            class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+            >お知らせ一覧はこちら<span class="btn-primary-rectangle"></span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section
+      class="mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)] px-[clamp(1.563rem,1.012rem+2.35vw,3.125rem)]"
+    >
+      <div
+        class="max-w-[1440px] mx-auto bg-picoIvory rounded-30 pt-[clamp(2.188rem,1.263rem+3.94vw,4.813rem)] pb-[clamp(2.188rem,0.889rem+5.54vw,5.875rem)] px-[clamp(2.656rem,-1.91rem+19.48vw,15.625rem)] lg:rounded-50"
+      >
+        <h2
+          class="text-[clamp(1.5rem,0.972rem+2.25vw,3rem)]
+        text-center
+        after:content-['about']
+        after:block
+        after:font-en
+        after:text-[clamp(0.875rem,0.567rem+1.31vw,1.75rem)]
+        after:text-tertiary
+        after:center
+        after:font-normal font-bold mb-[clamp(1.5rem,0.752rem+3.19vw,3.625rem)]"
+        >
+          ミライニ薬局について
+        </h2>
+
+        <div
+          class="max-w-[840px] mx-auto flex flex-col justify-between items-center gap-[clamp(1rem,0.56rem+1.88vw,2.25rem)] lg:items-end lg:flex-row"
+        >
+          <figure class="max-w-[110px] lg:max-w-[234px]">
+            <Image src={logoTree} alt="ミライニ薬局" />
+          </figure>
+
+          <div
+            class="flex flex-col justify-between gap-[clamp(1.5rem,0.972rem+2.25vw,3rem)]"
+          >
+            <p class="max-w-[226px] mx-auto lg:max-w-[576px] lg:mt-0 mt-auto">
+              さくら薬局とひかり薬局は合併してミライニ薬局として生まれ変わりました。
+              調剤薬局として皆さまの健康を守ること。在宅医療で日常生活に寄り添うこと。地域に根づき未来を育む。頼れる存在としての薬局を目指します。
+            </p>
+            <div class="lg:text-end">
+              <a
+                href="/"
+                class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+                >ミライニ薬局の詳細はこちら<span class="btn-primary-rectangle"
+                ></span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service -->
+    <section class="mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)]">
+      <div class="max-w-[1440px] mx-auto px-xl">
+        <h2
+          class="text-[clamp(1.5rem,0.972rem+2.25vw,3rem)] text-center after:content-['service'] after:block after:font-en after:text-[clamp(0.875rem,0.567rem+1.31vw,1.75rem)] after:text-tertiary after:center after:font-normal font-bold mb-[clamp(1.5rem,0.752rem+3.19vw,3.625rem)]"
+        >
+          サービス紹介
+        </h2>
+
+        <div
+          class="max-w-[920px] mx-auto flex flex-col justify-between gap-[clamp(2.938rem,2.431rem+2.16vw,4.375rem)] lg:flex-row"
+        >
+          <section
+            class="flex flex-col items-center justify-between grow shrink-1 basis-0 relative border-2 border-black rounded-30 bg-white pt-[clamp(1.764rem,1.086rem+2.89vw,3.688rem)] pb-[clamp(1.875rem,1.787rem+0.38vw,2.125rem)]"
+          >
+            <h3
+              class="text-[clamp(1.125rem,0.817rem+1.31vw,2rem)] absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-50%] inline-block px-4xl bg-white font-bold whitespace-nowrap"
+            >
+              調剤薬局
+            </h3>
+
+            <figure class="max-w-[94px] lg:max-w-[69px]">
+              <Image src={servicesPharmacy} alt="調剤薬局" />
+            </figure>
+            <p
+              class="max-w-[220px] lg:max-w-[278px] mt-[clamp(1rem,0.648rem+1.5vw,2rem)]"
+            >
+              飲み合わせや副作用のことなど、心配事は何でもご相談ください。かかりつけ薬剤師として寄り添います。
+            </p>
+            <div class="mt-[clamp(1.5rem,1.324rem+0.75vw,2rem)]">
+              <a
+                href="/"
+                class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+                >薬局事業の詳細はこちら<span class="btn-primary-rectangle"
+                ></span></a
+              >
+            </div>
+          </section>
+
+          <section
+            class="flex flex-col items-center justify-between grow shrink-1 basis-0 relative border-2 border-black rounded-30 bg-white pt-[clamp(1.764rem,1.086rem+2.89vw,3.688rem)] pb-[clamp(1.875rem,1.787rem+0.38vw,2.125rem)]"
+          >
+            <h3
+              class="text-[clamp(1.125rem,0.817rem+1.31vw,2rem)] absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-50%] inline-block px-4xl bg-white font-bold whitespace-nowrap"
+            >
+              在宅医療
+            </h3>
+            <figure class="max-w-[142px] lg:max-w-[104px]">
+              <Image src={servicesHomecare} alt="在宅医療" />
+            </figure>
+
+            <p
+              class="max-w-[220px] lg:max-w-[278px] mt-[clamp(1rem,0.648rem+1.5vw,2rem)]"
+            >
+              ご自宅へのお薬配達など幅広いサポート体制。薬局にお越しいただくことが難しい方へも安心を提供いたします。
+            </p>
+            <div class="mt-[clamp(1.5rem,1.324rem+0.75vw,2rem)]">
+              <a
+                href="/"
+                class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+                >在宅医療の詳細はこちら<span class="btn-primary-rectangle"
+                ></span></a
+              >
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- access -->
+    <section class="mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)]">
+      <div class="max-w-[1440] mx-auto">
+        <h2
+          class="text-[clamp(1.5rem,0.972rem+2.25vw,3rem)] text-center after:content-['access'] after:block after:font-en after:text-[clamp(0.875rem,0.567rem+1.31vw,1.75rem)] after:text-tertiary after:center after:font-normal font-bold mb-[clamp(1.5rem,0.752rem+3.19vw,3.625rem)]"
+        >
+          近くの店舗を探す
+        </h2>
+        <Slider />
+        <div class="text-center mt-2xl">
+          <a
+            href="/"
+            class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+          >
+            店舗情報の一覧はこちら<span class="btn-primary-rectangle"></span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- blog -->
+    <section class="mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)]">
+      <div class="max-w-[1440px] mx-auto px-m">
+        <h2
+          class="text-[clamp(1.5rem,0.972rem+2.25vw,3rem)] text-center after:content-['blog'] after:block after:font-en after:text-[clamp(0.875rem,0.567rem+1.31vw,1.75rem)] after:text-tertiary after:center after:font-normal font-bold mb-[clamp(1.5rem,0.752rem+3.19vw,3.625rem)]"
+        >
+          ミライニブログ
+        </h2>
+        <BlogList />
+        <div class="text-center mt-2xl">
+          <a
+            href="/"
+            class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+          >
+            店舗情報の一覧はこちら<span class="btn-primary-rectangle"></span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- recruit -->
+    <section class="mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)]">
+      <div class="max-w-[1440px] mx-auto px-xl">
+        <h2
+          class="text-[clamp(1.5rem,0.972rem+2.25vw,3rem)] text-center after:content-['recruit'] after:block after:font-en after:text-[clamp(0.875rem,0.567rem+1.31vw,1.75rem)] after:text-tertiary after:center after:font-normal font-bold mb-[clamp(1.5rem,0.752rem+3.19vw,3.625rem)]"
+        >
+          採用情報
+        </h2>
+        <div class="max-w-[920px] mx-auto">
+          <div>
+            <Image
+              src={recruit}
+              alt="薬局で男性と女性が横並びに立っている写真"
+              class="rounded-20 lg:rounded-50"
+            />
+          </div>
+
+          <div
+            class="max-w-[840px] mx-auto flex flex-col justify-between items-center gap-[clamp(1.5rem,0.668rem+3.55vw,3.862rem)] lg:flex-row mt-[clamp(0.25rem,-0.586rem+3.57vw,2.625rem)]"
+          >
+            <p>
+              ミライニ薬局では新しい仲間を募集しています。地域の皆様へ安心を提供する薬局を一緒につくっていきませんか。
+            </p>
+            <div>
+              <a
+                href="/"
+                class="btn-primary text-[clamp(0.875rem,0.655rem+0.94vw,1.5rem)]"
+                >採用情報の詳細はこちら<span class="btn-primary-rectangle"
+                ></span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

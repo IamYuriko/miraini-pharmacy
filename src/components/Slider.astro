@@ -1,0 +1,168 @@
+---
+import stores from "../content/access/store-data.json";
+const Stores = Object.values(stores).flat();
+---
+
+<!-- Swiperコンテナ -->
+<div class="swiper max-w-[1440px]">
+  <div class="swiper-wrapper">
+    {
+      Stores.map((Store) => (
+        <div class="swiper-slide group">
+          <a href="/">
+            <div class="group-hover:opacity-70 transition-all duration-[0.7s] ease-out">
+              <img
+                src={Store.image}
+                alt=""
+                class="rounded-20 lg:rounded-40 aspect-[225/142] lg:aspect-[23/13]"
+              />
+            </div>
+            <section class="grid justify-left mt-[clamp(0.25rem,-0.014rem+1.13vw,1rem)] lg:px-6xl">
+              <h3 class="text-[clamp(1.125rem,0.993rem+0.56vw,1.5rem)] font-bold">
+                {Store.store_name}
+              </h3>
+              <p>{Store.address.street}</p>
+              <p>
+                <span>電話：</span>
+                {Store.phone_number}
+              </p>
+            </section>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-button-prev rotate-180"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/css/bundle";
+  import { Navigation, Autoplay, Thumbs } from "swiper/modules";
+
+  const swiperConfig = new Swiper(".swiper", {
+    modules: [Autoplay, Navigation, Thumbs],
+    loop: true,
+
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    centeredSlides: true,
+    slidesPerView: 1.83,
+
+    spaceBetween: "2.639vw",
+    initialSlide: 1,
+    simulateTouch: true,
+    grabCursor: true,
+
+    breakpoints: {
+      1024: {
+        spaceBetween: "6.944vw",
+      },
+    },
+  });
+</script>
+
+<style>
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: var(--color-quaternary);
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    position: absolute !important;
+    @media screen and (min-width: 1024px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: var(--color-trafficYellow);
+    transition: background-color 0.6s ease-out;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: "";
+    background-image: url("../assets/icon-rectangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    @media screen and (min-width: 1024px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .swiper-button-prev {
+    left: 12vw !important;
+    @media screen and (min-width: 420px) {
+      left: 13vw !important;
+    }
+    @media screen and (min-width: 500px) {
+      left: 14vw !important;
+    }
+    @media screen and (min-width: 700px) {
+      left: 14.5vw !important;
+    }
+    @media screen and (min-width: 768px) {
+      left: 15vw !important;
+    }
+    @media screen and (min-width: 1024px) {
+      left: 14vw !important;
+    }
+    @media screen and (min-width: 1100px) {
+      left: 14.5vw !important;
+    }
+    @media screen and (min-width: 1440px) {
+      left: 215px !important;
+    }
+  }
+  .swiper-button-next {
+    right: 12vw !important;
+    @media screen and (min-width: 420px) {
+      right: 13vw !important;
+    }
+    @media screen and (min-width: 500px) {
+      right: 14vw !important;
+    }
+    @media screen and (min-width: 700px) {
+      right: 14.5vw !important;
+    }
+    @media screen and (min-width: 768px) {
+      right: 15vw !important;
+    }
+    @media screen and (min-width: 1024px) {
+      right: 14vw !important;
+    }
+    @media screen and (min-width: 1100px) {
+      right: 14.5vw !important;
+    }
+    @media screen and (min-width: 1440px) {
+      right: 215px !important;
+    }
+  }
+  /* 中央のスライド */
+  .swiper-slide-active {
+    scale: 1;
+    position: relative !important;
+  }
+  /* 左右のスライド */
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    scale: 0.6;
+  }
+  .swiper-slide-prev section,
+  .swiper-slide-next section {
+    display: none;
+  }
+</style>

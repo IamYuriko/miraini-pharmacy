@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../components/Logo.astro";
+import NavList from "../components/NavList.astro";
+---
+
+<header class="bg-header w-full sticky top-0 z-10">
+  <div
+    class="max-w-[1440px] mx-auto px-[clamp(1.563rem,0.572rem+4.23vw,4.375rem)] flex justify-between items-end 2xl:items-center 2xl:gap-4xl h-[74px] 2xl:h-[121px]"
+  >
+    <!-- ロゴ -->
+    <h1 class="max-w-[165px] 2xl:max-w-[224px] mb-s 2xl:mb-0">
+      <a href="/"><Logo /></a>
+    </h1>
+    <!-- ボタン -->
+    <!-- 開くボタン -->
+    <button
+      class="w-[56px] h-[50px] relative pointer cursor-pointer 2xl:hidden"
+      id="btn-open"
+      type="button"
+    >
+      <span
+        class="absolute top-0 left-[50%] translate-x-[-50%] w-[25px] h-[20px] flex flex-col justify-between"
+      >
+        <span class="w-[25px] h-[1px] bg-black"></span>
+        <span class="w-[25px] h-[1px] bg-black"></span>
+        <span class="w-[25px] h-[1px] bg-black"></span>
+      </span>
+      <span
+        class="w-[56px] w-text-base text-nowrap absolute bottom-[4px] left-1/2 -translate-x-1/2"
+        >メニュー</span
+      >
+    </button>
+    <!-- 閉めるボタン -->
+    <button
+      class="hidden w-[56px] h-[50px] relative cursor-pointer 2xl:hidden"
+      id="btn-close"
+      type="button"
+    >
+      <span class="absolute top-[9px]">
+        <span
+          class="inline-block w-[25px] h-[1px] bg-black rotate-[45deg] absolute top-0 left-1/2 -translate-x-1/2"
+        ></span>
+        <span
+          class="inline-block w-[25px] h-[1px] bg-black rotate-[-45deg] absolute top-0 left-1/2 -translate-x-1/2"
+        ></span>
+      </span>
+      <span
+        class="w-[56px] text-base absolute bottom-[6.32px] left-1/2 -translate-x-1/2"
+        >とじる
+      </span>
+    </button>
+    <!-- ナビゲーション -->
+    <nav
+      class="hidden fixed top-[74px] left-0 right-0 z-50 w-screen h-auto bg-picoIvory text-center py-[56px] animate-appear transition-all duration-[0.7s] ease-out 2xl:static 2xl:block 2xl:h-auto 2xl:w-fit 2xl:bg-transparent 2xl:ml-auto 2xl:top-[initial] 2xl:text-right 2xl:py-0"
+      id="panel"
+    >
+      <NavList />
+    </nav>
+    <div
+      class="hidden fixed top-[74px] left-0 right-0 z-10 h-screen bg-overlay 2xl:hidden"
+      id="overlay"
+    >
+    </div>
+  </div>
+</header>

@@ -1,0 +1,8 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+
+const { src = logo, alt = "ミライニ薬局" } = Astro.props;
+---
+
+<Image src={src} alt={alt} />

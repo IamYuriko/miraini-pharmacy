@@ -1,0 +1,26 @@
+---
+import Logo from "../components/Logo.astro";
+import NavList from "../components/NavList.astro";
+---
+
+<div
+  class="bg-[url('../assets/footer-bg.png')] bg-no-repeat bg-cover bg-right w-full h-[2.938rem] relative bottom-[-1px] left-0 right-0 mt-[clamp(5rem,3.68rem+5.63vw,8.75rem)] md:h-[4.188rem] xl:h-[5.438rem]"
+>
+</div>
+<footer class="w-full bg-picoIvory">
+  <div
+    class="flex flex-col items-center pt-[clamp(1.25rem,0.777rem+2.02vw,2.594rem)] pb-[clamp(1.375rem,1.298rem+0.33vw,1.594rem)]"
+  >
+    <div class="max-w-[224px] mb-[clamp(1.125rem,0.641rem+2.07vw,2.5rem)]">
+      <Logo />
+    </div>
+    <nav class="hidden 2xl:block 2xl:mb-2xl">
+      <NavList />
+    </nav>
+    <p class="font-en">
+      <small class="text-[clamp(0.75rem,0.662rem+0.38vw,1rem)]"
+        >©2023-2024 miraini Co., Ltd. All rights reserved.</small
+      >
+    </p>
+  </div>
+</footer>

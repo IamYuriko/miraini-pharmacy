@@ -44,35 +44,64 @@
 
     --breakpoint-2xl: 90rem; /* 1440px */
 
-    --animate-easeInOut: heroSectionAnimation 14s ease-out 0s infinite;
-    @keyframes heroSectionAnimation {
-            0% {
-                opacity: 0;
-            }
-            25% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 1;
-            }
-            75% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
+    --animate-easeInOut1: heroSectionAnimation1 12s ease-in infinite;
+    @keyframes heroSectionAnimation1 {
+    0% {
+            opacity: 1;
         }
+    
+        45% {
+            opacity: 1;
+        }
+    
+        50% {
+            opacity: 0;
+        }
+    
+        95% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+
+    --animate-easeInOut2: heroSectionAnimation2 12s ease-in infinite; 
+    @keyframes heroSectionAnimation2 {
+    0% {
+            opacity: 0;
+        }
+    
+        45% {
+            opacity: 0;
+        }
+    
+        50% {
+            opacity: 1;
+        }
+    
+        95% {
+            opacity: 1;
+        }
+    
+        100% {
+            opacity: 0;
+        }
+    }
 
     --animate-appear: appear 0.3s ease-out;
     @keyframes appear {
         0% {
-            opacity: 0;
+            opacity: 0.5;
         }
         100% {
             opacity: 1;
         }
     }
 }
+
+
 
 @layer base {
     body {
@@ -135,5 +164,11 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 4;
         overflow: hidden;
+    }
+
+    @-moz-document url-prefix() {
+        .firefox-icon-spacing {
+            margin-left: var(--spacing-2xl);
+        }
     }
 }

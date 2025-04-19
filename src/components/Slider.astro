@@ -4,36 +4,38 @@ const Stores = Object.values(stores).flat();
 ---
 
 <!-- Swiperコンテナ -->
-<div class="swiper max-w-[1440px]">
-  <div class="swiper-wrapper">
-    {
-      Stores.map((Store) => (
-        <div class="swiper-slide group">
-          <a href="/">
-            <div class="group-hover:opacity-70 transition-all duration-[0.7s] ease-out">
-              <img
-                src={Store.image}
-                alt=""
-                class="rounded-20 lg:rounded-40 aspect-[225/142] lg:aspect-[23/13]"
-              />
-            </div>
-            <section class="grid justify-left mt-[clamp(0.25rem,-0.014rem+1.13vw,1rem)] lg:px-6xl">
-              <h3 class="text-[clamp(1.125rem,0.993rem+0.56vw,1.5rem)] font-bold">
-                {Store.store_name}
-              </h3>
-              <p>{Store.address.street}</p>
-              <p>
-                <span>電話：</span>
-                {Store.phone_number}
-              </p>
-            </section>
-          </a>
-        </div>
-      ))
-    }
+<div class="overflow-hidden">
+  <div class="swiper max-w-[1440px]">
+    <div class="swiper-wrapper">
+      {
+        Stores.map((Store) => (
+          <div class="swiper-slide group">
+            <a href="/">
+              <div class="group-hover:opacity-70 transition-all duration-[0.7s] ease-out">
+                <img
+                  src={Store.image}
+                  alt=""
+                  class="rounded-20 lg:rounded-40 aspect-[225/142] lg:aspect-[23/13]"
+                />
+              </div>
+              <section class="grid justify-left mt-[clamp(0.25rem,-0.014rem+1.13vw,1rem)] lg:px-6xl">
+                <h3 class="text-[clamp(1.125rem,0.993rem+0.56vw,1.5rem)] font-bold">
+                  {Store.store_name}
+                </h3>
+                <p>{Store.address.street}</p>
+                <p>
+                  <span>電話：</span>
+                  {Store.phone_number}
+                </p>
+              </section>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+    <div class="swiper-button-prev rotate-180"></div>
+    <div class="swiper-button-next"></div>
   </div>
-  <div class="swiper-button-prev rotate-180"></div>
-  <div class="swiper-button-next"></div>
 </div>
 
 <script>
@@ -43,10 +45,10 @@ const Stores = Object.values(stores).flat();
 
   const swiperConfig = new Swiper(".swiper", {
     modules: [Autoplay, Navigation, Thumbs],
-    loop: true,
+    loop: false,
 
     autoplay: {
-      delay: 4500,
+      delay: 5500,
       disableOnInteraction: false,
     },
 
@@ -164,5 +166,18 @@ const Stores = Object.values(stores).flat();
   .swiper-slide-prev section,
   .swiper-slide-next section {
     display: none;
+  }
+  .swiper {
+    overflow: visible !important;
+  }
+  .swiper-slide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .swiper-slide-active,
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: 1;
+    pointer-events: auto;
   }
 </style>

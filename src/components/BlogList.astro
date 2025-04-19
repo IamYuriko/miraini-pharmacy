@@ -8,7 +8,7 @@ const articles = await getCollection("blog");
     articles.map((article) => (
       <li class="p-[clamp(0.938rem,0.827rem+0.47vw,1.25rem)] hover:bg-picoIvory hover:rounded-10 group">
         <a href="/">
-          <article class="flex flex-row gap-3xl lg:flex-col">
+          <article class="flex flex-row flex-start gap-3xl lg:flex-col">
             <p class="w-full min-w-[150px] overflow-hidden rounded-20 lg:hidden">
               <img
                 src={article.data.image.src}

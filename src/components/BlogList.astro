@@ -8,23 +8,23 @@ const articles = await getCollection("blog");
     articles.map((article) => (
       <li class="p-[clamp(0.938rem,0.827rem+0.47vw,1.25rem)] hover:bg-picoIvory hover:rounded-10 group">
         <a href="/">
-          <article class="flex flex-row flex-start gap-3xl lg:flex-col">
+          <article class="flex flex-row gap-3xl lg:flex-col">
             <p class="w-full min-w-[150px] overflow-hidden rounded-20 lg:hidden">
               <img
                 src={article.data.image.src}
                 alt=""
-                class="h-full group-hover:scale-[1.1] transition-all ease-out duration-700"
+                class="group-hover:scale-[1.1] transition-all ease-out duration-700"
               />
             </p>
             <div class="flex flex-col">
               <p class="text-[clamp(0.75rem,0.706rem+0.19vw,0.875rem)] mb-[clamp(0.125rem,-0.183rem+1.31vw,1rem)]">
                 {article.data.date}
               </p>
-              <p class="hidden lg:block lg:w-[200px] lg:overflow-hidden lg:rounded-20 mb-[clamp(0.125rem,-0.183rem+1.31vw,1rem)]">
+              <p class="hidden lg:block lg:w-[200px] lg:overflow-hidden lg:rounded-20 lg:mb-[clamp(0.125rem,-0.183rem+1.31vw,1rem)]">
                 <img
                   src={article.data.image.src}
                   alt=""
-                  class="group-hover:scale-[1.1] transition ease-in-out duration-700"
+                  class="lg:group-hover:scale-[1.1] lg:transition lg:ease-in-out lg:duration-700"
                 />
               </p>
               <h3 class="text-[clamp(1rem,0.912rem+0.38vw,1.25rem)] font-bold">

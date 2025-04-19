@@ -23,10 +23,10 @@
 
     --text-base: 0.875rem;/* 14px */
 
+    --spacing-xxs: -3rem;
     --spacing-xs: -2rem; /* -32px */
     --spacing-s: 0.408rem; /* 6.53px */
-    --spacing-m: 0.625rem; /* 10px */
-    --spacing-l: 1rem; /* 16px */
+    --spacing-m: 0.625rem; /* 10px */    --spacing-l: 1rem; /* 16px */
     --spacing-xl: 1.467rem; /* 23.47px */
     --spacing-2xl: 1.5rem; /* 24px */
     --spacing-3xl: 1.563rem; /* 25px */
@@ -110,7 +110,7 @@
     }
     img {
         max-width: 100%;
-        height: auto;
+        min-height: 100%;
         object-fit: cover;
     }
     a {
@@ -164,11 +164,5 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 4;
         overflow: hidden;
-    }
-
-    @-moz-document url-prefix() {
-        .firefox-icon-spacing {
-            margin-left: var(--spacing-2xl);
-        }
     }
 }
